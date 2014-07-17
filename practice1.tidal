@@ -1,0 +1,30 @@
+d1 $ stack [ 
+  sound "cp cp", 
+  sound "hh*2 [sn db:5] db:5 future*2", 
+  sound "arpy*8"
+]
+
+d1 $ stack [ 
+  sound "bd:1 bd*2", 
+  sound "hh*2 [sn cp] cp future*2",  
+  sound "arpy*8"
+]
+
+hush
+
+d2 $ slow 3 $ (|+| speed "0.9") $ (sound "bd*3 [bd*8 bd*8]/2")
+d1 $ slow 1 $ (|+| speed "0.9") $ sound "bd"
+
+d3 $ slow 1 $ (|+| speed "0.5") $ interlace (sound "arpy") (sound "bd bd bd bd")
+
+d1 $ slow 1 $ (|+| speed "0.9") $ (sound "[bd, bd*2, bd [bd*4, bd*4] bd]")
+d2 $ slow 1 $ (|+| speed "0.9") $ (sound "bd bd [bd*2 bd*2]")
+d3 $ slow 1 $ (|+| speed "0.5") $ (sound "sn:5*4 [sn:5*8 sn:5*8]")
+d3 $ silence
+d1 $ slow 1 $ (|+| speed "0.9") $ (sound "{[bd bd bd*2]*2, [sn:2 sn:2 sn:2]}")
+
+d4 $ sound "[drum:7*4 drum:7*4] drum:7"
+
+d5 $ stack [
+  sound "arpy*50",
+]

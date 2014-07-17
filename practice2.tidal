@@ -1,0 +1,14 @@
+hush
+d1 $ sound "moog"
+d1 $ sound "bev"
+d1 $ silence
+d2 $ slow 8 $ (|+| speed "0.5") $ sound "moog"
+d2 $ (|+| speed "0.5") $ sound "ade"
+d1 $ slow 32 $ jux ((|+| speed "0.5") . rev) $ striate' 32 (1/16) $ sound "bev"
+d3 $ slow 32 $ jux ((|+| speed "0.5") . rev) $ striate' 32 (1/16) $ sound "bev"
+d4 $ slow 32 $ jux ((|+| speed "0.5")) $ striate' 32 (1/16) $ sound "bev"
+d2 $ slow 32 $ jux ((|+| speed "1.5")) $ striate' 32 (1/16) $ sound "bev"
+d2 $ silence
+d4 $ slow 32 $ ((|+| speed "0.24")) $ striate' 32 (1/16) $ sound "bev"
+d4 $ silence
+d1 $ slow 32 $ jux (rev) $ striate' 32 (1/16) $ sound "bev"
