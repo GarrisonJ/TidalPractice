@@ -1,0 +1,18 @@
+
+d2 $ sound "drum drum*2 drum drum" 
+
+d1 $ sound (every 4 (density 2) "bd:1 bd bd:2 bd:5")
+   |+| pan (slow 16 sinewave1)
+
+d3 $ every 2 (0.25 <~) $ degradeBy 0.5 $ every 2 (rev) $ sound (every 4 (density 2) "bass:1 bass:2")
+
+d5 $ every 2 (0.25 <~) $ sound (every 4 (density 2) "bass:1 bass:2")
+   |+| density 3 (vowel "a e o")
+
+d4 $ sound (every 4 (density 4 . slow 2) "tech:4*4")
+    |+| shape ((/ 2) <$> sinewave1)
+
+d2 $ silence
+
+hush
+
