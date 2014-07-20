@@ -1,0 +1,15 @@
+d1 $ slow 2 $ sound "[[[can:5*8,can:2*3] can:3*8]?, can:1*4]"
+   |+| density 3 (vowel "a o e")
+
+d2 $ every 8 (|+| speed "0.5") $ every 4 (density 2) $ sound "can can:1*2"
+
+d3 $ every 4 (density 8) $ slow 2 $ sound "arpy*2 arpy:4*2"
+|+| speed "0.2 0.3 0.1 0.1"
+|+| gain "1"
+
+hush
+
+d4 $ every 4 (density 8) $ sound "[bd bd sn] sn sn sn"
+
+d5 $ interlace (sound "bass:6*8") (every 3 rev $ sound "[cp*2 cp:2*2]")
+|+| gain "0.9"
