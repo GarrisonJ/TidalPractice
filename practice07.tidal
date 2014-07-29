@@ -1,0 +1,24 @@
+d3 $ jux ((|+| speed "0.5") . rev) $ sound "[coeur:4 [coeur:4 coeur:5]]"
+|+| speed "0.5 0.75" 
+|+| pan "1 0 1 0"
+
+hush
+
+d1 $ slow 2 $ sound "808bd:6"
+|+| gain "0.8"
+
+|+| vowel "a o e"
+
+d3 $ slow 1 $ sound "808bd:7"
+|+| gain "0.8"
+|+| vowel "a o e"
+
+d4 $ slow 1 $ sound "[hh:5 sn:1]"
+|+| gain "0.5"
+
+d5 $ slow 01 $ sound "cp"
+|+| gain "0.75"
+
+
+d5 $ silence
+hush
